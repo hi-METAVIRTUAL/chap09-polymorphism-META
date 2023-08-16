@@ -2,6 +2,7 @@ package com.hw1.model.dto;
 
 public class Book {
 
+
     private String title;
     private String author;
     private String publisher;
@@ -51,4 +52,5 @@ public class Book {
 
 
     }
+
 }
