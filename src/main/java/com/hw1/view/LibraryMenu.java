@@ -1,21 +1,95 @@
 package com.hw1.view;
 
+import com.hw1.controller.LibraryManager;
+import com.hw1.model.dto.Book;
+import com.hw1.model.dto.Member;
+
+import java.util.Scanner;
+
 public class LibraryMenu {
-
     public void mainMenu() {
+        do {
+            System.out.println("====== Library Management System ======");
+            System.out.println("도서 대여 관리 프로그램에 접속하셨습니다.");
+            System.out.println("=======================================");
+            System.out.println("1. 마이페이지 관리");
+            System.out.println("2. 도서 전체 조회");
+            System.out.println("3. 도서 검색");
+            System.out.println("4. 도서 대여하기");
+            System.out.println("0. 프로그램 종료");
+            System.out.println("====================================");
+            System.out.println("원하는 관리 메뉴의 번호를 입력해 주세요 : ");
 
-    }
+            Scanner sc = new Scanner(System.in);
+            int selectMenu = sc.nextInt();
 
-    public void selectAll(){
+            switch (selectMenu) {
+                case 1 : LibraryManager.myInfo(); break;
+                case 2 : LibraryManager.selectAll(); break;
+                case 3 : LibraryManager.searchBook(); break;
+                case 4 : LibraryManager.rentBook(); break;
+                case 0 : System.out.println("프로그램을 종료합니다."); return;
+                default : System.out.println("잘못된 번호입니다. 다시 입력해 주세요."); break;
+            }
 
-    }
 
-    public void searchBook() {
+            public void selectAll(){
+                LibraryManager lm = new LibraryManager();
+                Book[] bList = lm.selectAll();
 
-    }
+                for(Book[] i : bList) {
+                    System.out.println([i] + "번 도서 : " + i);
+                }
 
-    public void rentBook(){
 
-    }
 
-}
+
+
+
+
+
+
+
+
+
+
+            }
+
+            public void searchBook() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }
+
+            public void rentBook(){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }
+
+        }
+
