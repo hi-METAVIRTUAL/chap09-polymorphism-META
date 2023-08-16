@@ -3,22 +3,12 @@ package com.hw1.view;
 import com.hw1.controller.LibraryManager;
 import com.hw1.model.dto.Book;
 import java.util.Scanner;
-import com.hw1.model.dto.Member;
 
 
 public class LibraryMenu {
 
 
-
-
-
-
-
-
-
-
-
-
+LibraryManager lm = new LibraryManager();
     public void mainMenu() {
         do {
             System.out.println("====== Library Management System ======");
@@ -36,120 +26,45 @@ public class LibraryMenu {
             int selectMenu = sc.nextInt();
 
             switch (selectMenu) {
-                case 1 : LibraryManager.myInfo(); break;
-                case 2 : LibraryManager.selectAll(); break;
-                case 3 : LibraryManager.searchBook(); break;
-                case 4 : LibraryManager.rentBook(); break;
-                case 0 : System.out.println("프로그램을 종료합니다."); return;
-                default : System.out.println("잘못된 번호입니다. 다시 입력해 주세요."); break;
+                case 1:
+                    lm.myInfo();
+                    break;
+                case 2:
+                    selectAll();
+                    break;
+                case 3:
+               //     LibraryManager.searchBook();
+                    break;
+                case 4:
+                    rentBook();
+                    break;
+                case 0:
+                    System.out.println("프로그램을 종료합니다.");
+                    return;
+                default:
+                    System.out.println("잘못된 번호입니다. 다시 입력해 주세요.");
+                    break;
             }
 
-
-            public void selectAll(){
-                LibraryManager lm = new LibraryManager();
-                Book[] bList = lm.selectAll();
-
-                for(Book[] i : bList) {
-                    System.out.println([i] + "번 도서 : " + i);
-                }
-
-
-
-
-
-
-
-
-
-
-
-
+        }while (true);
 
             }
 
-            public void searchBook() {
+    private Book[] selectAll() {
+        LibraryManager lm = new LibraryManager();
+        Book[] bList = lm.selectAll();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-            }
-
-            public void rentBook(){
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        for (int i = 0; i < bList.length; i++) {
+            System.out.println(bList[i]);
+        }
+        return bList;
     }
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
-
-
-    public void searchBook() {
+/*    public void searchBook() {
         Scanner sc = new Scanner(System.in);
         System.out.println("검색할 제목 키워드 : ");
         String keyword = sc.nextLine();
@@ -158,24 +73,10 @@ public class LibraryMenu {
         Book[] searchList = lm.searchBook(keyword);
 
 
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
         for(List books : searchList){
             System.out.println(books);
         }
-    }
+    }*/
 
     public void rentBook(){
         Scanner sc= new Scanner(System.in);
@@ -191,21 +92,14 @@ public class LibraryMenu {
             case 2 : message = "성공적으로 대여되었습니다. 요리학원 쿠폰이 빌급 되었습니다. \n " +
                     "마이페이지를 통해 확인하세요"; break;
         }
-
-
-
-
-
-
-
-
+        System.out.println(message);
 
 
 
     }
 
+}
 
-            }
 
-        }
+
 
