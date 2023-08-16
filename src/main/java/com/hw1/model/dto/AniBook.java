@@ -1,6 +1,6 @@
 package com.hw1.model.dto;
 
-public class AniBook  {
+public class AniBook {
 
     //나
 }
