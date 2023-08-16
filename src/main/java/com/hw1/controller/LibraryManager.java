@@ -1,5 +1,6 @@
 package com.hw1.controller;
 
+
 import com.hw1.model.dto.AniBook;
 import com.hw1.model.dto.Book;
 import com.hw1.model.dto.CookBook;
@@ -16,7 +17,22 @@ public class LibraryManager {
         bList[3] = new CookBook("이혜정의 얼마나 맛있게요", "이혜정", "문학", false);
         bList[4] = new CookBook("최현석의 날 따라해봐", "최현석", "소금책", true);
     }
+
     public void insertMember(Member mem(){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 
@@ -35,17 +51,62 @@ public class LibraryManager {
 
     public Member myInfo(){
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
 
     public Book[] selectAll(){
         return bList;
+
     }
 
     public book[] searchBook(String keyword){
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
     public int rentBook(int index) {
+        int result = 0;
+        Book[] blist = new Book[index];
+        if (blist[index].getAccessAge() < 19){
+            result = 1;
+        }else if (blist[index].getCoupon() == true){
+
+            result = 2;
+            blist[index].setCoupon(+1);
+        }
+
+        return  result;
+    }
+
+
+
 
     }
 
