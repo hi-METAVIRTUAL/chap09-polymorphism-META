@@ -20,7 +20,25 @@ public class LibraryManager {
 
 
 
-    public void insertMember(Member mem(){
+
+
+
+
+
+
+
+
+
+    public void insertMember(Member mem) {
+
+
+
+
+
+
+
+
+
 
 
 
@@ -37,6 +55,9 @@ public class LibraryManager {
 
 
     }
+
+
+    public Member myInfo() {
 
 
 
@@ -71,7 +92,11 @@ public class LibraryManager {
 
 
 
+
     }
+
+
+    public Book[] selectAll() {
 
 
     public Book[] selectAll(){
@@ -91,11 +116,24 @@ public class LibraryManager {
 
 
 
+
     }
 
-    public book[] searchBook(String keyword){
+    public Book[] searchBook(String keyword) {
+        Book[] book = new Book[5];
+        for(
+                if(bList.contains(keyword)){
+                    bList.add();
+                }
+        )
 
 
+
+
+
+
+
+        return searchList;
 
 
 
@@ -145,4 +183,14 @@ public class LibraryManager {
 
 
 
+
+
+
+
+
+
+
+
+
+    }
 }

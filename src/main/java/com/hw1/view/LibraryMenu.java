@@ -5,7 +5,17 @@ import com.hw1.model.dto.Book;
 import java.util.Scanner;
 import com.hw1.model.dto.Member;
 
+
 public class LibraryMenu {
+
+
+
+
+
+
+
+
+
 
 
 
@@ -99,16 +109,6 @@ public class LibraryMenu {
 
 
 
-    }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -134,6 +134,47 @@ public class LibraryMenu {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+    public void searchBook() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("검색할 제목 키워드 : ");
+        String keyword = sc.nextLine();
+        LibraryManager.searchBook(keyword);
+
+        Book[] searchList = lm.searchBook(keyword);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        for(List books : searchList){
+            System.out.println(books);
+        }
     }
 
     public void rentBook(){
@@ -152,6 +193,16 @@ public class LibraryMenu {
         }
 
 
+
+
+
+
+
+
+
+
+
+    }
 
 
             }
