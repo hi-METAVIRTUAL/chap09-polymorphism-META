@@ -71,6 +71,20 @@ public class LibraryManager {
     public Book[] selectAll(){
         return bList;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
     public book[] searchBook(String keyword){
@@ -110,3 +124,20 @@ public class LibraryManager {
 
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
