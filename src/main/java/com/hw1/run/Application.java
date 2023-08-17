@@ -10,6 +10,7 @@ public class Application {
         LibraryMenu lm = new LibraryMenu();
         lm.mainMenu();
 
+    }
 
     }
 }

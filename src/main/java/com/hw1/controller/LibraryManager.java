@@ -1,12 +1,11 @@
 package com.hw1.controller;
 
 import com.hw1.model.dto.AniBook;
-import com.hw1.model.dto.Book;
 import com.hw1.model.dto.CookBook;
 import com.hw1.model.dto.Member;
 
 
-public class LibraryManager {
+    public class LibraryManager {
     private Member mem = null;
     private Book[] bList = new Book[5];
 
@@ -47,31 +46,46 @@ public class LibraryManager {
 
     }
 
-    public Book[] searchBook(String keyword) {
+/*    public Book[] searchBook(String keyword) {
         Book[] book = new Book[5];
         for (
                 if (bList.contains(keyword)) {
                     bList.add();
                 }
         )
-            return searchList;
-    }
+
+        return searchList;
+
+
+    }*/
+
 
 
     public int rentBook(int index) {
         int result = 0;
-        if (bList[index]instanceof AniBook) {
-            if (((AniBook) bList[index]).getAccessAge() < 19) {
+        if(bList[index] instanceof AniBook){
+            if (((AniBook) bList[index]).getAccessAge() < 19){
                 result = 1;
             }
-        }else if(bList[index] instanceof CookBook) {
-            if(((CookBook) bList[index]).isCoupon() ){
+        }else if(bList[index] instanceof CookBook){
+            if (((CookBook) bList[index]).isCoupon() ){
                 result = 2;
+
+        int count = 0;
+        for(int i=0; i<book.length; i++){
+            if(bList[i].getTitle.contains(keyword)){
+                book[count]=bList[i];
+                count++;
             }
         }
-        return  result;
+        return book;
     }
-}
+   }
+
+
+
+
+
 
 
 

@@ -7,9 +7,11 @@ public class CookBook extends Book {
     public CookBook() {
     }
 
-    public CookBook(String title, String author, String publisher, boolean coupon) {
-        super(title, author, publisher);
+    public CookBook(String title, String author, String publisher,boolean coupon) {
+        super(title,author,publisher);
         this.coupon = coupon;
+
+
     }
 
     public boolean isCoupon() {
