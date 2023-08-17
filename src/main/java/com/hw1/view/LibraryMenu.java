@@ -3,12 +3,15 @@ package com.hw1.view;
 import com.hw1.controller.LibraryManager;
 import com.hw1.model.dto.Book;
 import java.util.Scanner;
+import com.hw1.model.dto.CookBook;
+import com.hw1.model.dto.Member;
+
 
 
 public class LibraryMenu {
 
 
-LibraryManager lm = new LibraryManager();
+    LibraryManager lm = new LibraryManager();
     public void mainMenu() {
         do {
             System.out.println("====== Library Management System ======");
@@ -33,7 +36,7 @@ LibraryManager lm = new LibraryManager();
                     selectAll();
                     break;
                 case 3:
-               //     LibraryManager.searchBook();
+                    searchBook();
                     break;
                 case 4:
                     rentBook();
@@ -45,20 +48,20 @@ LibraryManager lm = new LibraryManager();
                     System.out.println("잘못된 번호입니다. 다시 입력해 주세요.");
                     break;
             }
-        }while (true);
+        } while (true);
+    }
 
 
-            public void selectAll () {
-                LibraryManager lm = new LibraryManager();
-                Book[] bList = lm.selectAll();
+        public void selectAll() {
+            LibraryManager libraryManager = new LibraryManager();
+            Book[] selectedBooks = libraryManager.selectAll();
 
-                for (Book[] i : bList) {
-                    System.out.println([i] + "번 도서 : " + i);
-                }
-
-
+            System.out.println("=========전체 도서 조회=================");
+            for (int i = 0; i < selectedBooks.length; i++) {
+                System.out.println("인덱스: " + i);
+                System.out.println(selectedBooks[i]);
             }
-
+        }
 
 
             public void searchBook() {
@@ -111,6 +114,7 @@ LibraryManager lm = new LibraryManager();
     }
 
 }
+
 
 
 
