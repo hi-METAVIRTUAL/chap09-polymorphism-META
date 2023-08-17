@@ -1,11 +1,7 @@
 package com.hw1.controller;
 
 import com.hw1.model.dto.AniBook;
-import com.hw1.model.dto.Book;
 import com.hw1.model.dto.CookBook;
-import com.hw1.model.dto.Member;
-import com.hw1.view.LibraryMenu;
-
 
 public class LibraryManager {
     private Member mem = null;
@@ -19,8 +15,8 @@ public class LibraryManager {
     }
 
 
-    public void insertMember(Member mem) {
 
+    public void insertMember(Member mem) {
 
 
     }
@@ -36,6 +32,20 @@ public class LibraryManager {
 
 
     public Book[] selectAll(){
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
 
         return bList;
 
@@ -64,19 +74,17 @@ public class LibraryManager {
         }else if(bList[index] instanceof CookBook){
             if (((CookBook) bList[index]).isCoupon() ){
                 result = 2;
+
+        int count = 0;
+        for(int i=0; i<book.length; i++){
+            if(bList[i].getTitle.contains(keyword)){
+                book[count]=bList[i];
+                count++;
             }
         }
-
-        return  result;
+        return book;
     }
-
-
-
-
-    }
-
-
-
+   }
 
 
 
