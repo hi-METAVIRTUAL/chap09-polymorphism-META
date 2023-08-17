@@ -55,18 +55,14 @@ public class LibraryManager {
 
     public Book[] searchBook(String keyword) {
         Book[] book = new Book[5];
-        for(
-                if(bList.contains(keyword)){
-                    bList.add();
-                }
-        )
-
-
-
-
-
-
-        return searchList;
+        int count = 0;
+        for(int i=0; i<book.length; i++){
+            if(bList[i].getTitle.contains(keyword)){
+                book[count]=bList[i];
+                count++;
+            }
+        }
+        return book;
     }
 
     public int rentBook(int index) {
