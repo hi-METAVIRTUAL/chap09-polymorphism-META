@@ -3,12 +3,12 @@ package com.hw1.view;
 import com.hw1.controller.LibraryManager;
 import com.hw1.model.dto.Book;
 import java.util.Scanner;
-import com.hw1.model.dto.Member;
 
 
 public class LibraryMenu {
 
 
+LibraryManager lm = new LibraryManager();
     public void mainMenu() {
         do {
             System.out.println("====== Library Management System ======");
@@ -27,16 +27,16 @@ public class LibraryMenu {
 
             switch (selectMenu) {
                 case 1:
-                    LibraryManager.myInfo();
+                    lm.myInfo();
                     break;
                 case 2:
-                    LibraryMenu.selectAll();
+                    selectAll();
                     break;
                 case 3:
-                    LibraryMenu.searchBook();
+               //     LibraryManager.searchBook();
                     break;
                 case 4:
-                    LibraryMenu.rentBook();
+                    rentBook();
                     break;
                 case 0:
                     System.out.println("프로그램을 종료합니다.");
@@ -45,6 +45,7 @@ public class LibraryMenu {
                     System.out.println("잘못된 번호입니다. 다시 입력해 주세요.");
                     break;
             }
+        }while (true);
 
 
             public void selectAll () {
@@ -57,6 +58,7 @@ public class LibraryMenu {
 
 
             }
+
 
 
             public void searchBook() {
@@ -73,6 +75,7 @@ public class LibraryMenu {
                     }
                 }
             }
+
 
             public void rentBook () {
                 Scanner sc = new Scanner(System.in);
@@ -99,7 +102,15 @@ public class LibraryMenu {
             }
 
 
+
         }
 
+
+
+
     }
+
 }
+
+
+
