@@ -3,8 +3,6 @@ package com.hw1.view;
 import com.hw1.controller.LibraryManager;
 import com.hw1.model.dto.Book;
 import java.util.Scanner;
-import com.hw1.model.dto.CookBook;
-import com.hw1.model.dto.Member;
 
 
 
@@ -105,15 +103,7 @@ public class LibraryMenu {
             }
 
 
-
         }
-
-
-
-
-    }
-
-}
 
 
 
