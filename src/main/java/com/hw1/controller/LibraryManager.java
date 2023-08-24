@@ -1,6 +1,7 @@
 package com.hw1.controller;
 
 import com.hw1.model.dto.AniBook;
+import com.hw1.model.dto.Book;
 import com.hw1.model.dto.CookBook;
 import com.hw1.model.dto.Member;
 
@@ -42,10 +43,10 @@ import com.hw1.model.dto.Member;
 
     }
 
-/*    public Book[] searchBook(String keyword) {
+   public Book[] searchBook(String keyword) {
         Book[] book = new Book[5];
         for (
-                if (bList.contains(keyword)) {
+                if (bList.equals(keyword)) {
                     bList.add();
                 }
         )
@@ -53,7 +54,7 @@ import com.hw1.model.dto.Member;
         return searchList;
 
 
-    }*/
+    }
 
 
 

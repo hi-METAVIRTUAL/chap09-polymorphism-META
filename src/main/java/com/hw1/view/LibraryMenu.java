@@ -2,13 +2,16 @@ package com.hw1.view;
 
 import com.hw1.controller.LibraryManager;
 import com.hw1.model.dto.Book;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 
 
 public class LibraryMenu {
 
-
+    Scanner sc = new Scanner(System.in);
     LibraryManager lm = new LibraryManager();
     public void mainMenu() {
         do {
@@ -23,7 +26,6 @@ public class LibraryMenu {
             System.out.println("====================================");
             System.out.println("원하는 관리 메뉴의 번호를 입력해 주세요 : ");
 
-            Scanner sc = new Scanner(System.in);
             int selectMenu = sc.nextInt();
 
             switch (selectMenu) {
@@ -51,13 +53,11 @@ public class LibraryMenu {
 
 
         public void selectAll() {
-            LibraryManager libraryManager = new LibraryManager();
-            Book[] selectedBooks = libraryManager.selectAll();
 
-            System.out.println("=========전체 도서 조회=================");
-            for (int i = 0; i < selectedBooks.length; i++) {
-                System.out.println("인덱스: " + i);
-                System.out.println(selectedBooks[i]);
+            Book[] book = lm.selectAll();
+
+            for(Book books : book){
+                System.out.println(books);
             }
         }
 
