@@ -21,16 +21,12 @@ import com.hw1.model.dto.Member;
     public void insertMember(Member mem) {
 
 
+
+
     }
 
     public Member myInfo() {
         System.out.println("=========내 회원 정보=================");
-        mem = new Member();
-        mem.getName();
-        mem.getAge();
-        mem.getGender();
-        mem.getCouponCount();
-        System.out.println(mem);
         return mem;
     }
 
@@ -71,16 +67,11 @@ import com.hw1.model.dto.Member;
             if (((CookBook) bList[index]).isCoupon() ){
                 result = 2;
 
-        int count = 0;
-        for(int i=0; i<book.length; i++){
-            if(bList[i].getTitle.contains(keyword)){
-                book[count]=bList[i];
-                count++;
             }
         }
-        return book;
+        return result;
     }
-   }
+    }
 
 
 

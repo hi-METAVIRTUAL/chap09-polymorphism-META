@@ -8,7 +8,7 @@ public class AniBook extends Book {
     }
 
     public AniBook(String title, String author, String publisher, int accessAge) {
-        super(title,author,publisher);
+        super(title, author, publisher);
         this.accessAge = accessAge;
     }
 
@@ -22,9 +22,8 @@ public class AniBook extends Book {
 
     @Override
     public String toString() {
-        return "AniBook{" +
+        return "AniBook{" + super.toString() +
                 "accessAge=" + accessAge +
-                super.toString()+
                 '}';
     }
 }
